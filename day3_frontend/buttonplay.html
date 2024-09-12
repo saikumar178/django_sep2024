@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            width: 80px;
+            height: 40px;
+            background-color: yellow;
+            color: grey;
+            border: 2px solid brown;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 24px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <input id="mybtn"class="button" type="button" value="0" onmouseenter="double()"  onmouseleave="decrement()" onmousemove="increment()"/>
+    <script>
+        function decrement(){
+            number=document.getElementById('mybtn').value;
+            number=parseInt(number);
+            number--
+            number=document.getElementById('mybtn').value=number;
+        }
+        function increment(){
+            number=document.getElementById('mybtn').value;
+            number=parseInt(number);
+            number++
+            number=document.getElementById('mybtn').value=number;
+        }
+        function double(){
+            number=document.getElementById('mybtn').value;
+            number=parseInt(number);
+            number=number*2;
+            number=document.getElementById('mybtn').value=number;
+        }
+    </script>
+</body>
+</html>

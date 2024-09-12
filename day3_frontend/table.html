@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            border: 1px solid black; /* Outer border */
+        }
+    
+        th, td {
+            border-left: 1px solid black; /* Vertical line between columns */
+            border-right: 1px solid black; /* Vertical line between columns */
+        }
+    
+        th {
+            border-top: 1px solid black; /* Keep border for the top header */
+            border-bottom: 1px solid black; /* Keep border below 'hello' */
+        }
+    
+        tr:first-child td, tr:nth-child(2) td {
+            border-bottom: 1px solid black; /* Keep border for 'Asia/Non-Asia' row */
+        }
+    
+        tr:not(:first-child):not(:nth-child(2)) td {
+            border-top: none; /* Remove horizontal borders for inner rows */
+            border-bottom: none; /* Remove inner bottom border */
+        }
+        td{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0" border="1" width="50%">
+        <th colspan="2">places</th>
+        <tr>
+            <td>Aisa</td>
+            <td>Non-Asia</td>
+        </tr>
+        <tr>
+            <td>Himalayas</td>
+            <td>Andes</td>
+        </tr>
+        <tr>
+            <td>Hindu-Kush</td>
+            <td>Alps</td>
+        </tr>
+        <tr>
+            <td>Karakoram</td>
+            <td>Lesetho</td>
+        </tr>
+
+    </table>
+</body>
+</html>
